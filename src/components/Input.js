@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./Input.css";
 
-import useDispatch from "react-redux";
+import {useDispatch} from "react-redux";
 import { saveTodo } from "../features/todoSlice";
 
 function Input() {
@@ -10,8 +10,7 @@ function Input() {
   const dispatch = useDispatch();
 
   const addTodo = () => {
-      console.log(`Adding ${input}`)
-
+   
       dispatch(saveTodo({
           item:input,
           done:false,
